@@ -12,8 +12,8 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mahdi.languagelearning.data.Tables.Word;
-import com.example.mahdi.languagelearning.data.WordViewModel;
+import com.example.mahdi.languagelearning.RoomDB.Word;
+import com.example.mahdi.languagelearning.RoomDB.WordViewModel;
 import com.example.mahdi.languagelearning.recyclerView.RecyclerViewClickListener;
 import com.example.mahdi.languagelearning.recyclerView.WordListAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

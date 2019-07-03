@@ -6,4 +6,5 @@
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="hint_passed">Enter 1 for passed and other for not passed</string>
+    <string name="default_word">A</string>
 </resources>
