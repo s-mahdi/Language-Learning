@@ -9,4 +9,6 @@
     <color name="purple">#D85CF2</color>
     <color name="red">#D94436</color>
     <color name="lightRed">#F28379</color>
+    <color name="buttonLabel">#d3d3d3</color>
+    <color name="gray">#656565</color>
 </resources>
