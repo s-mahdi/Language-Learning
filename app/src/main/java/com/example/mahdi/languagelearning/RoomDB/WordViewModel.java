@@ -32,6 +32,10 @@ public class WordViewModel extends AndroidViewModel {
     }
 
     public void setPassed(Word word) {
-        mRepository.setPassed(word);
+        mRepository.setPassed(word.getWid());
+    }
+
+    public void setNextWordPassed(int id) {
+        mRepository.setPassed(++id);
     }
 }

@@ -31,9 +31,10 @@ class WordRepository {
         new insertAsyncTask(mWordDao).execute(word);
     }
 
-    void setPassed(Word word) {
-        new setPassedAsyncTask(mWordDao).execute(word);
+    void setPassed(int id) {
+        new setPassedAsyncTask(mWordDao).execute(id);
     }
+
 
     private static class insertAsyncTask extends AsyncTask<Word, Void, Void> {
 
@@ -50,7 +51,7 @@ class WordRepository {
         }
     }
 
-    private static class setPassedAsyncTask extends AsyncTask<Word, Void, Void> {
+    private static class setPassedAsyncTask extends AsyncTask<Integer, Void, Void> {
 
         private WordDao mAsyncTaskDao;
 
@@ -59,8 +60,8 @@ class WordRepository {
         }
 
         @Override
-        protected Void doInBackground(final Word... params) {
-            mAsyncTaskDao.setPassed(params[0].getWid());
+        protected Void doInBackground(final Integer... integers) {
+            mAsyncTaskDao.setPassed(integers[0]);
             return null;
         }
     }

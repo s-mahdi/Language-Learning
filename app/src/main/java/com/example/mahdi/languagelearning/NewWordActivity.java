@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * Activity for entering a word.
  */
 
-public class NewWordActivity extends AppCompatActivity {
+public class    NewWordActivity extends AppCompatActivity {
 
     public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
     public static final String EXTRA_REPLY_PASSED = "com.example.android.wordlistsql.REPLY_PASSED";

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/trainingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/quizNextBtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/next_btn"
+        android:text="@string/next_farsi"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/training_card_1"
+        layout="@layout/training_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/training_card_2"
+        app:layout_constraintEnd_toStartOf="@+id/training_card_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/training_card_2" />
+
+    <include
+        android:id="@+id/training_card_2"
+        layout="@layout/training_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/quizNextBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/training_card_1"
+        app:layout_constraintTop_toBottomOf="@+id/TrainingWordTextView" />
+
+    <TextView
+        android:id="@+id/TrainingWordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/circle_shape"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/training_text"
+        android:textColor="@android:color/white"
+        android:textSize="81sp"
+        app:layout_constraintBottom_toTopOf="@+id/training_card_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainingToolbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -61,8 +61,9 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         Word current = mWords.get(position);
         holder.wordItemView.setText(current.getWord());
 
+        // set card bg color
         if (current.isPassed()) {
-            holder.wordItemView.getBackground().setColorFilter(ContextCompat.getColor(context, R.color.orange), PorterDuff.Mode.SRC_OVER);
+            holder.wordItemView.getBackground().setColorFilter(ContextCompat.getColor(context, R.color.blue), PorterDuff.Mode.SRC_OVER);
         } else
             holder.wordItemView.getBackground().setColorFilter(ContextCompat.getColor(context, R.color.gray), PorterDuff.Mode.SRC_OVER);
     }

@@ -57,7 +57,80 @@ public abstract class WordRoomDatabase extends RoomDatabase {
 
             Word word = new Word("A", true);
             mDao.insert(word);
+
             word = new Word("B", false);
+            mDao.insert(word);
+
+            word = new Word("C", false);
+            mDao.insert(word);
+
+            word = new Word("D", false);
+            mDao.insert(word);
+
+            word = new Word("E", false);
+            mDao.insert(word);
+
+            word = new Word("F", false);
+            mDao.insert(word);
+
+            word = new Word("G", false);
+            mDao.insert(word);
+
+            word = new Word("H", false);
+            mDao.insert(word);
+
+            word = new Word("I", false);
+            mDao.insert(word);
+
+            word = new Word("J", false);
+            mDao.insert(word);
+
+            word = new Word("K", false);
+            mDao.insert(word);
+
+            word = new Word("L", false);
+            mDao.insert(word);
+
+            word = new Word("M", false);
+            mDao.insert(word);
+
+            word = new Word("N", false);
+            mDao.insert(word);
+
+            word = new Word("O", false);
+            mDao.insert(word);
+
+            word = new Word("P", false);
+            mDao.insert(word);
+
+            word = new Word("Q", false);
+            mDao.insert(word);
+
+            word = new Word("R", false);
+            mDao.insert(word);
+
+            word = new Word("S", false);
+            mDao.insert(word);
+
+            word = new Word("T", false);
+            mDao.insert(word);
+
+            word = new Word("U", false);
+            mDao.insert(word);
+
+            word = new Word("V", false);
+            mDao.insert(word);
+
+            word = new Word("W", false);
+            mDao.insert(word);
+
+            word = new Word("X", false);
+            mDao.insert(word);
+
+            word = new Word("Y", false);
+            mDao.insert(word);
+
+            word = new Word("Z", false);
             mDao.insert(word);
             return null;
         }

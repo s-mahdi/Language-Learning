@@ -7,4 +7,94 @@
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="hint_passed">Enter 1 for passed and other for not passed</string>
     <string name="default_word">A</string>
+    <string name="next_farsi">بعدی</string>
+    <string name="training_text">A</string>
+    <string name="training_cardIB_description">corresponding image for text</string>
+
+    <string name="apple"><b>A</b>pple</string>
+    <string name="ant"><b>A</b>nt</string>
+
+    <string name="ball"><b>B</b>all</string>
+    <string name="bag"><b>B</b>ag</string>
+
+    <string name="cat"><b>C</b>at</string>
+    <string name="cake"><b>C</b>ake</string>
+
+    <string name="dog"><b>D</b>og</string>
+    <string name="door"><b>D</b>oor</string>
+
+    <string name="egg"><b>E</b>gg</string>
+    <string name="elephant"><b>E</b>lephant</string>
+
+    <string name="fish"><b>F</b>ish</string>
+    <string name="flower"><b>F</b>lower</string>
+
+    <string name="gift"><b>G</b>ift</string>
+    <string name="grass"><b>G</b>rass</string>
+
+    <string name="hat"><b>H</b>at</string>
+    <string name="horse"><b>H</b>orse</string>
+
+    <string name="ice_cream"><b>I</b>ce cream</string>
+    <string name="iran"><b>I</b>ran</string>
+    <string name="iron"><b>I</b>ron</string>
+
+    <string name="jam"><b>J</b>am</string>
+    <string name="jellyfish"><b>J</b>ellyfish</string>
+
+    <string name="kid"><b>K</b>id</string>
+    <string name="kangaroo"><b>K</b>angaroo</string>
+
+    <string name="lamp"><b>L</b>amp</string>
+    <string name="lion"><b>L</b>ion</string>
+
+    <string name="mom"><b>M</b>om</string>
+    <string name="milk"><b>M</b>ilk</string>
+
+    <string name="night"><b>N</b>ight</string>
+    <string name="nose"><b>N</b>ose</string>
+
+    <string name="orange"><b>O</b>range</string>
+    <string name="old"><b>O</b>ld</string>
+    <string name="octopus"><b>O</b>ctopus</string>
+
+    <string name="purple"><b>P</b>urple</string>
+    <string name="pizza"><b>P</b>izza</string>
+
+    <string name="quick"><b>Q</b>uick</string>
+    <string name="queen"><b>Q</b>ueen</string>
+
+    <string name="rabbit"><b>R</b>abbit</string>
+    <string name="rain"><b>R</b>ain</string>
+
+    <string name="sun"><b>S</b>un</string>
+    <string name="sea"><b>S</b>ea</string>
+
+    <string name="table"><b>T</b>able</string>
+    <string name="toy"><b>T</b>oy</string>
+
+    <string name="umbrella"><b>U</b>mbrella</string>
+    <string name="up"><b>U</b>p</string>
+
+    <string name="van"><b>V</b>an</string>
+    <string name="vegetable"><b>V</b>egetable</string>
+
+    <string name="wolf"><b>W</b>olf</string>
+    <string name="wood"><b>W</b>ood</string>
+
+    <string name="fox">fo<b>X</b></string>
+    <string name="box">bo<b>X</b></string>
+
+    <string name="boy">bo<b>y</b></string>
+    <string name="butterfly">butterfl<b>y</b></string>
+
+    <string name="zip"><b>Z</b>ip</string>
+    <string name="zebra"><b>Z</b>ebra</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="play_word_sound">play word sound</string>
+
+
 </resources>

@@ -24,6 +24,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
+    public static final String EXTRA_REPLY = "om.example.android.languagelearning.mainActivity.REPLY";
 
     private WordViewModel mWordViewModel;
 
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Objects.requireNonNull(getSupportActionBar()).hide();
-
         /*Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
 
@@ -44,10 +44,18 @@ public class MainActivity extends AppCompatActivity {
         RecyclerViewClickListener listener = new RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                // TODO: 03/07/2019 connect to training class
-                Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_LONG).show();
+
                 Word clickedWord = Objects.requireNonNull(mWordViewModel.getAllWords().getValue()).get(position);
-                mWordViewModel.setPassed(clickedWord);
+                if (clickedWord.isPassed()) {
+                    Intent intent = new Intent(MainActivity.this, TrainingActivity.class);
+                    intent.putExtra(EXTRA_REPLY, clickedWord);
+                    startActivity(intent);
+                } else Toast.makeText(MainActivity.this, "Not passed yet!", Toast.LENGTH_LONG).show();
+
+
+                /*Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_LONG).show();
+                Word clickedWord = Objects.requireNonNull(mWordViewModel.getAllWords().getValue()).get(position);
+                mWordViewModel.setPassed(clickedWord);*/
             }
         };
 

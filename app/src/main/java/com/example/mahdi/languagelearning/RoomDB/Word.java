@@ -1,12 +1,15 @@
 package com.example.mahdi.languagelearning.RoomDB;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "word_table", indices = @Index(value = {"word"}, unique = true))
-public class Word {
+public class Word implements Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "wid")
@@ -21,6 +24,24 @@ public class Word {
         this.word = word;
         this.passed = passed;
     }
+
+    protected Word(Parcel in) {
+        wid = in.readInt();
+        word = in.readString();
+        passed = in.readByte() != 0;
+    }
+
+    public static final Creator<Word> CREATOR = new Creator<Word>() {
+        @Override
+        public Word createFromParcel(Parcel in) {
+            return new Word(in);
+        }
+
+        @Override
+        public Word[] newArray(int size) {
+            return new Word[size];
+        }
+    };
 
     public String getWord() {
         return this.word;
@@ -38,7 +59,7 @@ public class Word {
         this.passed = passed;
     }
 
-    int getWid() {
+    public int getWid() {
         return wid;
     }
 
@@ -47,4 +68,15 @@ public class Word {
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(wid);
+        parcel.writeString(word);
+        parcel.writeByte((byte) (passed ? 1 : 0));
+    }
 }

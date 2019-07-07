@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/trainingCardIB"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:background="@drawable/rounded_rectangle_bg"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:padding="20dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        android:contentDescription="@string/training_cardIB_description" />
+
+    <TextView
+        android:id="@+id/trainingCardTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ant"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"
+        android:textSize="24sp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
