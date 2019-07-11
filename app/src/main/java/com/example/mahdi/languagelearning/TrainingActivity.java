@@ -1,6 +1,7 @@
 package com.example.mahdi.languagelearning;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -9,11 +10,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.mahdi.languagelearning.RoomDB.Word;
 
 import java.util.Locale;
-import java.util.Objects;
 
 public class TrainingActivity extends AppCompatActivity {
 
@@ -42,7 +43,10 @@ public class TrainingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_training);
 
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Toolbar toolbar = findViewById(R.id.trainingToolbar);
+        setSupportActionBar(toolbar);
+        setTitle("آموزش");
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
 
         getView();
 

@@ -1,18 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MyStyle" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/gray</item>
-        <item name="colorAccent">@color/blue</item>
-        <item name="android:statusBarColor">@color/orange</item>
+    <style name="MyStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
     </style>
 
     <style name="QuizOptionStyle" parent="android:Widget.TextView">
@@ -21,6 +28,22 @@
         <item name="android:background">@drawable/rounded_rectangle_bg</item>
         <item name="android:layout_width">132dp</item>
         <item name="android:layout_height">132dp</item>
+    </style>
+
+    <style name="LoginTextViewStyle" parent="android:Widget.EditText">
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:background">@drawable/loginEditTextShape</item>
+        <item name="android:textColorHint">#5C9CF2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/iransans</item>
+
     </style>
 
 

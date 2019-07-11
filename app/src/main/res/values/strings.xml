@@ -97,4 +97,13 @@
     <string name="play_word_sound">play word sound</string>
 
 
+    <string name="next_btn">ادامه</string>
+    <string name="name">نام و نام خانوادگی</string>
+    <string name="google_login">ورود با گوگل یا فیس بوک</string>
+    <string name="password">رمزعبور</string>
+    <string name="enter">ورود</string>
+    <string name="register_text">کاربر جدید هستید؟ اینجا ثبت نام کنید.</string>
+    <string name="email">پست الکترونیکی</string>
+
+
 </resources>

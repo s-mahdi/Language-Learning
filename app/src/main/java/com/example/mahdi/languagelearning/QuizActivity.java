@@ -1,6 +1,7 @@
 package com.example.mahdi.languagelearning;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -19,7 +21,6 @@ import com.example.mahdi.languagelearning.RoomDB.WordViewModel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
-import java.util.Objects;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -39,7 +40,11 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        //set tool bar
+        Toolbar toolbar = findViewById(R.id.quizToolbar);
+        setSupportActionBar(toolbar);
+        setTitle("آزمون");
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
 
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
 
@@ -153,8 +158,7 @@ public class QuizActivity extends AppCompatActivity {
 
                 nextButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.green), PorterDuff.Mode.SRC_OVER);
                 nextButton.setTextColor(getResources().getColor(R.color.white));
-            }
-            else {
+            } else {
                 Toast.makeText(QuizActivity.this, "آخ اشبتاه بود!", Toast.LENGTH_LONG).show();
                 button.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.SRC_OVER);
                 nextButton.getBackground().setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.red), PorterDuff.Mode.SRC_OVER);

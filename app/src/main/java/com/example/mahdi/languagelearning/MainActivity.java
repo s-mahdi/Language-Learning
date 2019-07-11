@@ -1,12 +1,17 @@
 package com.example.mahdi.languagelearning;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +22,10 @@ import com.example.mahdi.languagelearning.RoomDB.WordViewModel;
 import com.example.mahdi.languagelearning.recyclerView.RecyclerViewClickListener;
 import com.example.mahdi.languagelearning.recyclerView.WordListAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import java.util.List;
 import java.util.Objects;
@@ -33,9 +42,50 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Objects.requireNonNull(getSupportActionBar()).hide();
-        /*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        //if user enter app for first time then show intro activity
+        SharedPreferences sharedPreferences = this.getSharedPreferences("com.example.languageLearning", Context.MODE_PRIVATE);
+
+        if (!Objects.equals(sharedPreferences.getString("isLogedIn", String.valueOf(false)), "true")) {
+            sharedPreferences.edit().putString("isLogedIn", "true").apply();
+            startActivity(new Intent(MainActivity.this, IntroActivity.class));
+        }
+
+        Toolbar toolbar = findViewById(R.id.mainActivityToolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("صفحه اصلی");
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("پروفایل");
+
+        new DrawerBuilder()
+                .withActivity(this)
+                .withHeader(R.layout.util_drawer_hdr)
+                .withToolbar(toolbar)
+                .addDrawerItems(
+                        item1,
+                        item2
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        if (drawerItem != null) {
+
+                            switch ((int) drawerItem.getIdentifier()) {
+                                case 1:
+                                    // TODO: 12/07/2019 actions of drawer should be done here
+
+                            }
+
+                        }
+
+                        return false;
+                    }
+                })
+                .withShowDrawerOnFirstLaunch(false)
+                .withFireOnInitialOnClick(true)
+                .withSavedInstance(savedInstanceState)
+                .withDrawerGravity(Gravity.END)
+                .build();
 
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
 
@@ -50,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, TrainingActivity.class);
                     intent.putExtra(EXTRA_REPLY, clickedWord);
                     startActivity(intent);
-                } else Toast.makeText(MainActivity.this, "Not passed yet!", Toast.LENGTH_LONG).show();
+                } else Toast.makeText(MainActivity.this, "هنوز باز نشده!", Toast.LENGTH_LONG).show();
 
 
                 /*Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_LONG).show();

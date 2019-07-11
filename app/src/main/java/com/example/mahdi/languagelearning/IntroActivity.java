@@ -1,5 +1,6 @@
 package com.example.mahdi.languagelearning;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -10,15 +11,15 @@ import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.github.paolorotolo.appintro.model.SliderPage;
 
-import java.util.Objects;
-
 public class IntroActivity extends AppIntro2 {
+
+    Intent i;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Objects.requireNonNull(getSupportActionBar()).hide();
+         i = new Intent(IntroActivity.this, MainActivity.class);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -33,7 +34,7 @@ public class IntroActivity extends AppIntro2 {
         SliderPage sliderPage2 = new SliderPage();
         sliderPage2.setTitle("بازی");
         sliderPage2.setDescription("اینجا میتونی بازی کنی و لذت ببری");
-        sliderPage2.setImageDrawable(R.drawable.ic_controller);
+         sliderPage2.setImageDrawable(R.drawable.ic_football);
         sliderPage2.setBgColor(getResources().getColor(R.color.red));
         addSlide(AppIntroFragment.newInstance(sliderPage2));
 
@@ -49,6 +50,7 @@ public class IntroActivity extends AppIntro2 {
     @Override
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
+        startActivity(i);
         finish();
     }
 
@@ -56,6 +58,7 @@ public class IntroActivity extends AppIntro2 {
     @Override
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
+        startActivity(i);
         finish();
     }
 }
