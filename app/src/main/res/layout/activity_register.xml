@@ -19,6 +19,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/name_editText"
+        style="@style/LoginTextViewStyle"
+        android:drawableEnd="@drawable/ic_person_black_24dp"
+        android:hint="@string/name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <EditText
         android:id="@+id/email_edittext"
         style="@style/LoginTextViewStyle"
         android:drawableEnd="@drawable/ic_email_black_24dp"
@@ -26,7 +36,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+        app:layout_constraintTop_toBottomOf="@+id/name_editText" />
 
     <EditText
         android:id="@+id/password_edittext"
@@ -63,24 +73,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/google_button"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_facebook" />
-
-    <TextView
-        android:id="@+id/new_account"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/iransan"
-        android:onClick="register"
-        android:text="@string/register_text"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/google_button"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/forg_textview"
@@ -101,10 +95,14 @@
         android:layout_height="50dp"
         android:background="#ffffff"
         android:fontFamily="@font/iransan"
-        android:text="@string/enter"
+        android:text="@string/register"
         android:textColor="#5C9CF2"
         android:textSize="20sp"
+        android:onClick="registeration"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:onClick="login"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_button"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

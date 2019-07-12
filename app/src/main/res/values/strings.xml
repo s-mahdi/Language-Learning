@@ -102,6 +102,7 @@
     <string name="google_login">ورود با گوگل یا فیس بوک</string>
     <string name="password">رمزعبور</string>
     <string name="enter">ورود</string>
+    <string name="register">ثبت نام</string>
     <string name="register_text">کاربر جدید هستید؟ اینجا ثبت نام کنید.</string>
     <string name="email">پست الکترونیکی</string>
 
